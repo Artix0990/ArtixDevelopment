@@ -1,6 +1,5 @@
 Config = {}
 
--- Configuration for BurgerShot locations
 Config.Locations = {
     Till = vector3(1.0, 2.0, 3.0),
     Fridge = vector3(4.0, 5.0, 6.0),
@@ -9,7 +8,6 @@ Config.Locations = {
     Wholesaler = vector3(13.0, 14.0, 15.0)
 }
 
--- Prices for items
 Config.Images = {
     burger = 'https://example.com/images/burger.png',
     fries = 'https://example.com/images/fries.png',
