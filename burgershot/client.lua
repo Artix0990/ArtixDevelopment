@@ -57,7 +57,7 @@ local burgerShotLocations = {
     {name = "Till", coords = vector3(1.0, 2.0, 3.0)},
     {name = "Fridge", coords = vector3(4.0, 5.0, 6.0)},
     {name = "Grill", coords = vector3(7.0, 8.0, 9.0)},
-    {name = "Drinks Machine", coords = vector3(10.0, 11.0, 12.0)},
+    {name = "Drinks Machine", coords = vector3(-1193.91, -894.34, 13.89)},
     {name = "Wholesaler", coords = vector3(13.0, 14.0, 15.0)}
 }
 
