@@ -59,8 +59,6 @@ AddEventHandler('fastfood:clockOut', function()
     local src = source
     local clockInTime = clockedInPlayers[src]
     if job == "fastfood" then  -- Check if the player has the fastfood job
-    if job == "fastfood" then  -- Check if the player has the fastfood job
-    if job == "fastfood" then  -- Check if the player has the fastfood job
     if clockInTime then
         local clockOutTime = os.time()  -- Get the current time as clock out time
         local duration = os.difftime(clockOutTime, clockInTime)  -- Calculate duration
