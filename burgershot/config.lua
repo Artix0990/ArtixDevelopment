@@ -1,5 +1,7 @@
 Config = {}
 
+Config.EnableDeliveryFeature = true  -- Enable or disable the delivery feature
+
 Config.Images = {
     ["burger-bleeder"] = 'https://example.com/images/burger-bleeder.png',
     ["burger-moneyshot"] = 'https://example.com/images/burger-moneyshot.png',

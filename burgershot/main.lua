@@ -30,6 +30,11 @@ function AccessWholesaler()
     print("Accessing wholesaler.")
 end
 
+local deliveryLocations = {
+    {name = "NPC1", coords = vector3(20.0, 30.0, 40.0)},  -- Example NPC location
+    {name = "NPC2", coords = vector3(25.0, 35.0, 45.0)}   -- Another NPC location
+}
+
 local burgerShotLocations = {
     {name = "Till", coords = vector3(1.0, 2.0, 3.0)},
     {name = "Fridge", coords = vector3(4.0, 5.0, 6.0)},

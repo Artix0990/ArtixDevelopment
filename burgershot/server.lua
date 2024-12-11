@@ -2,6 +2,23 @@ local QBCore = exports['qb-core']:GetCoreObject()
 
 local clockedInPlayers = {}
 
+RegisterServerEvent('fastfood:deliverFood')  -- New delivery event
+AddEventHandler('fastfood:deliverFood', function(npc)
+    local src = source
+    local Player = QBCore.Functions.GetPlayer(src)
+
+    -- Logic to check if the player has food to deliver
+    -- For example, check if the player has a specific item in their inventory
+    if Player.Functions.GetItemByName('food_item') then  -- Replace 'food_item' with the actual item name
+        -- Logic for successful delivery
+        TriggerClientEvent('QBCore:Notify', src, "Food delivered to " .. npc.name, "success")
+        print("Player " .. Player.PlayerData.charinfo.firstname .. " delivered food to " .. npc.name)
+    else
+        TriggerClientEvent('QBCore:Notify', src, "You don't have any food to deliver!", "error")
+        print("Player " .. Player.PlayerData.charinfo.firstname .. " tried to deliver food but has none.")
+    end
+end)
+
 RegisterServerEvent('fastfood:transaction')
 AddEventHandler('fastfood:transaction', function(item, price)
     local src = source
