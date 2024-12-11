@@ -1,4 +1,24 @@
 local QBCore = exports['qb-core']:GetCoreObject()
+local Target = exports['qb-target']
+
+-- Define target points for clocking in and out
+Citizen.CreateThread(function()
+    Target.AddTargetEntity(GetPlayerPed(-1), {
+        options = {
+            {
+                event = "fastfood:clockIn",
+                icon = "fas fa-sign-in-alt",
+                label = "Clock In",
+            },
+            {
+                event = "fastfood:clockOut",
+                icon = "fas fa-sign-out-alt",
+                label = "Clock Out",
+            },
+        },
+        distance = 2.5
+    })
+end)
 
 function OpenTill()
     print("Till opened for transactions.")
@@ -9,30 +29,24 @@ function DisplayFoodImages()
     local images = Config.Images
     for item, url in pairs(images) do
         print("Displaying image for: " .. item .. " at " .. url)
-        
     end
 end
-
 
 function AccessFridge()
     print("Accessing fridge storage.")
 end
 
-
 function UseGrill()
     print("Using the grill.")
 end
-
 
 function UseDrinksMachine()
     print("Using the drinks machine.")
 end
 
-
 function AccessWholesaler()
     print("Accessing wholesaler.")
 end
-
 
 local burgerShotLocations = {
     {name = "Till", coords = vector3(1.0, 2.0, 3.0)},
@@ -41,7 +55,6 @@ local burgerShotLocations = {
     {name = "Drinks Machine", coords = vector3(10.0, 11.0, 12.0)},
     {name = "Wholesaler", coords = vector3(13.0, 14.0, 15.0)}
 }
-
 
 for _, location in pairs(burgerShotLocations) do
     print("Creating interaction point for: " .. location.name)
