@@ -1,48 +1,68 @@
 Config = {}
 
-Config.EnableDeliveryFeature = true  -- Enable or disable the delivery feature
-
-Config.Images = {
-    ["burger-bleeder"] = 'https://example.com/images/burger-bleeder.png',
-    ["burger-moneyshot"] = 'https://example.com/images/burger-moneyshot.png',
-    ["burger-torpedo"] = 'https://example.com/images/burger-torpedo.png',
-    ["burger-heartstopper"] = 'https://example.com/images/burger-heartstopper.png',
-    ["burger-meatfree"] = 'https://example.com/images/burger-meatfree.png',
-    ["burger-fries"] = 'https://example.com/images/burger-fries.png',
-    ["burger-softdrink"] = 'https://example.com/images/burger-softdrink.png',
-    ["burger-mshake"] = 'https://example.com/images/burger-mshake.png',
+Config.GaragePedlocation = {
+  {cords = vector3(-1178.588, -891.9196, 13.799622 -1), h = 302.58825}  -- Garage NPC Spawn Location.
 }
 
-Config.Consumables = {
-    -- Food 
-    ["burger-bleeder"] = math.random(35, 54),
-    ["burger-moneyshot"] = math.random(35, 54),
-    ["burger-torpedo"] = math.random(35, 54),
-    ["burger-heartstopper"] = math.random(35, 54),
-    ["burger-meatfree"] = math.random(35, 54),
-    ["burger-fries"] = math.random(35, 54),
-
-    -- Drinks
-    ["burger-softdrink"] = math.random(40, 50),
-    ["burger-mshake"] = math.random(40, 50),
+Config.Items = {
+  label = "Shop",
+  slots = 7,
+  items = {
+    [1] = {
+      name = "burger-bun",
+      price = 0,
+      amount = 5,
+      info = {},
+      type = "item",
+      slot = 1,
+    },
+    [2] = {
+      name = "burger-raw",
+      price = 0,
+      amount = 5,
+      info = {},
+      type = "item",
+      slot = 2,
+    },
+    [3] = {
+      name = "burger-tomato",
+      price = 0,
+      amount = 5,
+      info = {},
+      type = "item",
+      slot = 3,
+    },
+    [4] = {
+      name = "burger-lettuce",
+      price = 0,
+      amount = 5,
+      info = {},
+      type = "item",
+      slot = 4,
+    },
+    [5] = {
+      name = "burger-potato",
+      price = 0,
+      amount = 2,
+      info = {},
+      type = "item",
+      slot = 5,
+    },
+    [6] = {
+      name = "burger-mshakeformula",
+      price = 0,
+      amount = 5,
+      info = {},
+      type = "item",
+      slot = 6,
+    },
+    [7] = {
+      name = "burger-sodasyrup",
+      price = 0,
+      amount = 5,
+      info = {},
+      type = "item",
+      slot = 7,
+    },
+  }
 }
-
-Config.Prices = {
-    burger = 5,
-    fries = 3,
-    drink = 2
-}
-
-
-Config.Locations = {
-    Till = vector3(1.0, 2.0, 3.0),
-    Fridge = vector3(4.0, 5.0, 6.0),
-    Grill = vector3(7.0, 8.0, 9.0),
-    DrinksMachine = vector3(-1193.91, -894.34, 13.89),
-    Wholesaler = vector3(13.0, 14.0, 15.0),
-    BossMenu = vector3(-1192.04, -902.476, 13.998) -- Boss menu location
-    burger = 'https://example.com/images/burger.png',
-    fries = 'https://example.com/images/fries.png',
-    drink = 'https://example.com/images/drink.png'
-}
-
