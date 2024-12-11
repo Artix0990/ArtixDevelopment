@@ -6,12 +6,12 @@ Citizen.CreateThread(function()
     Target.AddTargetEntity(GetPlayerPed(-1), {
         options = {
             {
-                event = "fastfood:clockIn",
+                event = "burgershot:clockIn",
                 icon = "fas fa-sign-in-alt",
                 label = "Clock In",
             },
             {
-                event = "fastfood:clockOut",
+                event = "burgershot:clockOut",
                 icon = "fas fa-sign-out-alt",
                 label = "Clock Out",
             },

@@ -2,8 +2,8 @@ local QBCore = exports['qb-core']:GetCoreObject()
 
 local clockedInPlayers = {}
 
-RegisterServerEvent('fastfood:deliverFood')  -- New delivery event
-AddEventHandler('fastfood:deliverFood', function(npc)
+RegisterServerEvent('burgershot:deliverFood')  -- New delivery event
+AddEventHandler('burgershot:deliverFood', function(npc)
     local src = source
     local Player = QBCore.Functions.GetPlayer(src)
 
@@ -19,8 +19,8 @@ AddEventHandler('fastfood:deliverFood', function(npc)
     end
 end)
 
-RegisterServerEvent('fastfood:transaction')
-AddEventHandler('fastfood:transaction', function(item, price)
+RegisterServerEvent('burgershot:transaction')
+AddEventHandler('burgershot:transaction', function(item, price)
     local src = source
     local Player = QBCore.Functions.GetPlayer(src)
 
@@ -33,16 +33,16 @@ AddEventHandler('fastfood:transaction', function(item, price)
     end
 end)
 
-RegisterServerEvent('fastfood:restock')
-AddEventHandler('fastfood:restock', function(item, quantity)
+RegisterServerEvent('burgershot:restock')
+AddEventHandler('burgershot:restock', function(item, quantity)
     local src = source
     local Player = QBCore.Functions.GetPlayer(src)
 
     print("Restocking item: " .. item .. " with quantity: " .. quantity)
 end)
 
-RegisterServerEvent('fastfood:clockIn')
-AddEventHandler('fastfood:clockIn', function()
+RegisterServerEvent('burgershot:clockIn')
+AddEventHandler('burgershot:clockIn', function()
     local src = source
     local Player = QBCore.Functions.GetPlayer(src)
     if not clockedInPlayers[src] then
@@ -54,11 +54,11 @@ AddEventHandler('fastfood:clockIn', function()
     end
 end)
 
-RegisterServerEvent('fastfood:clockOut')
-AddEventHandler('fastfood:clockOut', function()
+RegisterServerEvent('burgershot:clockOut')
+AddEventHandler('burgershot:clockOut', function()
     local src = source
     local clockInTime = clockedInPlayers[src]
-    if job == "fastfood" then  -- Check if the player has the fastfood job
+    if job == "burgershot" then  -- Check if the player has the burgershot job
     if clockInTime then
         local clockOutTime = os.time()  -- Get the current time as clock out time
         local duration = os.difftime(clockOutTime, clockInTime)  -- Calculate duration
